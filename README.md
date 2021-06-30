@@ -1,5 +1,5 @@
 # e-shop-point
-e-hop point is e-commerce web project related to electronics products like mobiles ,refrigeratow washing machine,ac's
+e-hop point is e-commerce web project related to electronics products like mobiles ,refrigerator washing machine,ac's
 
 below technology is used for developed:
 for backend:
