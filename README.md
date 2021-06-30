@@ -6,7 +6,7 @@ for backend:
 python,django-3, drf(django rest framework)
 
 for frontend:
-javascript,jquery,html,css
+javascript,jquery,html,css,bootstrap
 
 i used Razorpay payment gateway in testing environment for making online payment
 
