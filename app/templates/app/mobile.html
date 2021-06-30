@@ -1,0 +1,53 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block pagename %}
+<script>
+  var pagetitle = "hamberger_click_return_page";
+</script>
+{% endblock pagename %}
+{% block main-content %}
+<div class="container-fluid" style="margin-top: 89px;" id="product_list_page">
+ <div class="row">
+   <div class="col-3 offset-9">
+    <button type="button" class="btn text-muted" id="mobile_responsive_filter_menu_btn_product_filter"><i class="fas fa-sliders-h"></i></button>
+   </div>
+  <div class="col-sm-3 col-12 mt-sm-3 mt-0">
+      <!-- list group start -->
+   <div class="list-group py-2 " id="list_group_filters">
+    <a href="#" class="list-group-item list-group-item-action active" data-all="all" aria-current="true">
+      All
+    </a>
+    <a href="#" class="list-group-item list-group-item-action" data-filter="above">Above <i class="fas fa-rupee-sign" style="font-size: 13px;"></i> 10000</a>
+    <a href="#" class="list-group-item list-group-item-action" data-filter="belove">belove <i class="fas fa-rupee-sign" style="font-size: 13px;"></i> 10000</a>
+    <!-- <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+    <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">A disabled link item</a> -->
+  </div>
+   <!-- list group end -->
+  </div>
+  <div class="col-sm-8 py-2 mt-3">
+   <div class="container-fluid">
+       <div class="row" id="cat_products_card_container">
+           <!-- row start -->
+           <!-- <div class="col-sm-4" id="product_list_card">
+                card start 
+            <div class="card" style="width: 15rem;">
+                <a href=""><img src="http://192.168.42.63:8000/media/productimg/Redmi_9_Power.jpg" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <p class="text-center" id="card_title">Card title dfdhhhghhjk</p>
+                  <p class="card-text text-center" id="pro_list_card_checked_price"><i class="fas fa-rupee-sign"></i> 19000 </p>
+                  <p class="card-text text-center" id="pro_list_card_text"><i class="fas fa-rupee-sign"></i> 19000 </p>
+                </div>
+              </div>
+               card end 
+           </div> -->
+     
+        
+       <!-- row end -->
+       </div>
+   </div>
+ 
+  </div>
+ </div>
+</div>
+{% endblock main-content %}

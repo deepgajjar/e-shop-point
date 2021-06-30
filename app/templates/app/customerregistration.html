@@ -1,0 +1,62 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Customer Registration{% endblock title %}
+{% block pagename %}
+<script>
+  var pagetitle = "customer_registration";
+</script>
+{% endblock pagename %}
+{% block main-content %}
+<div class="container"  id="customer_registeration_area" style="margin-top: 70px;">
+ <div class="row my-3">
+  <div class="col-sm-6 offset-sm-3">
+   <h3 class="text-center">Customer Registration</h3>
+   <hr>
+
+   <form action="" method="post" novalidate class="shadow p-5">
+      <div class="row mb-3">
+         <div class="col-sm-6">
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="first_name" placeholder="Enter your first name">
+         </div>
+         <div class="col-sm-6 mt-sm-0 mt-3">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="last_name" placeholder="Enter your last name">
+         </div>
+      </div>
+      <div class="mb-3">
+         <label for="mobile_no" class="form-label">Mobile No</label>
+         <input type="number" class="form-control" id="mobile_no" placeholder="9999999999">
+         <div id="emailHelp" class="form-text">We'll never share your mobile no with anyone else.</div>
+        </div>
+    <div class="mb-3">
+     <label for="inputEmail4" class="form-label">Email</label>
+     <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com">
+     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+     <label for="inputPassword1" class="form-label">Password</label>
+     <input type="password" class="form-control" id="inputPassword1" placeholder="********">
+    </div>
+    <div class="mb-3">
+     <label for="inputPassword2" class="form-label">Confirm Password</label>
+     <input type="password" class="form-control" id="inputPassword2" placeholder="********">
+    </div>
+    <div class="text-end">
+     <button type="button" class="btn btn-danger" id="userregistration_btn">Submit</button>
+    </div>
+    <br>
+    <div class="text-center text-primary fw-bold"><small>Existing User ? <a href="{% url 'login' %}"
+       class="text-danger">Login Now</a> </small></div>
+    {% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+    <p class="alert alert-danger my-3">{{error}}</p>
+    {% endfor %}
+    {% endif %}
+   </form>
+  </div>
+ </div>
+</div>
+
+</form>
+{% endblock main-content %}

@@ -1,0 +1,59 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block pagename %}
+<script>
+  var pagetitle = "OrderDetailPage";
+</script>
+{% endblock pagename %}
+{% block main-content %}
+<!-- <div class="container" style="margin-top: 80px;">
+ <div class="row">
+ <h3>Welcome Sonam</h3>
+  <div class="col-sm-2 border-end">
+   <ul class="list-unstyled">
+    <li class="d-grid"><a href="{% url 'orders' %}" class="btn btn-primary">Orders</a></li>
+   </ul>
+  </div>
+  <div class="col-sm-9 offset-sm-1">
+    <div class="row">
+     <div class="col-sm-6">Order 1</div>
+     <div class="col-sm-6">Order 2</div>
+    </div>
+   </div>
+ </div>
+</div> -->
+
+<div class="container" style="margin-top: 90px;" id="profile_page_main_container">
+    <div class="row">
+
+      <div class="d-none justify-content-center" style="background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)); height: 100%; position:fixed; left:0; top:0; padding-top: 350px; z-index: 9; color: white;" id="wait_spinner">
+         <div class="spinner-border" role="status">
+           <span class="visually-hidden" >Loading...</span>
+         </div>
+       </div>
+
+     <!-- <h5 id="profile_welcome_name" class="text-center">Welcome Sonam</h5> -->
+     <div class="col-sm-2 border-end">
+      <ul class="list-unstyled" id="order_page_menutab">
+       <li class="d-grid"><a href="{% url 'orders' %}" class="btn btn-primary" id="order_page_all_order_tab">Orders</a></li>
+       <li class="d-grid"><a href="#" class="btn" id="order_page_openord_tab_btn" data-btntype="open_orders">Open Orders</a></li>
+       <li class="d-grid"><a href="#" class="btn" id="order_page_cancell_ord_tab_btn" data-btntype="cancelled_orders">Cancelled Orders</a></li>
+      </ul>
+     </div>
+     <!-- main profile tab code  -->
+     <div class="col-sm-9 offset-sm-1">
+        <div class="row" id="all_disp_orders_container">
+        
+
+        </div> <!-- row end-->
+     </div>
+     <!-- main profile tab code  end-->
+   <!-- Chnage password -->
+   
+   
+   <!-- address tab -->
+
+   </div>
+</div>
+{% endblock main-content %}

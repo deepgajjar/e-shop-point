@@ -1,0 +1,99 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Profile{% endblock title %}
+{% block pagename %}
+<script>
+  var pagetitle = "profilepage";
+</script>
+{% endblock pagename %}
+{% block main-content %}
+<div class="container"  style="margin-top: 70px;" id="profile_page_main_container">
+ <div class="row">
+  <h5 id="profile_welcome_name" class="text-center">Welcome Sonam</h5>
+  <div class="col-sm-2 border-end">
+   <ul class="list-unstyled" id="profile_page_menutab">
+    <li class="d-grid"><a href="{% url 'profile' %}" class="btn btn-primary">Profile</a></li>
+    <li class="d-grid"><a href="#" class="btn" id="profile_address_tab_btn" data-btntype="address">Address</a></li>
+    <li class="d-grid"><a href="#" class="btn" id="profile_changepassword_btn" data-btntype="changepassword">Change Password</a></li>
+   </ul>
+  </div>
+  <!-- main profile tab code  -->
+  <div class="col-sm-8 offset-sm-1" id="main_profile_tab" style="">
+   <form action="" method="post">
+    <!-- {% csrf_token %} -->
+    <div class="row">
+    <div class="col-8 mb-1">
+      <label for="full_name_of_user" class="form-label">Name</label>
+      <input type="text" class="form-control" id="full_name_of_user" readonly>
+    </div>
+    <div class="col-sm-1 col-2 offset-1"><button class="btn btn-warning" id="name_edit_button" style="margin-top: 30px;" data-btnname="edit_name_btn"><i class="far fa-edit"></i></button></i></div>
+  </div>
+  <div class="row">
+    <div class="col-8 mb-1">
+      <label for="inputEmailforuser" class="form-label">Email</label>
+      <input type="text" class="form-control" id="inputEmailforuser" placeholder="1234 Main St" readonly>
+    </div>
+    <div class="col-sm-1 col-2 offset-1"><button class="btn btn-warning" id="emailid_edit_button" data-btnname="edit_email_btn" style="margin-top: 30px;"><i class="far fa-edit"></i></button></i></div>
+  </div>
+   <div class="row">
+    <div class="col-8 mb-1">
+      <label for="mobilenoforuser" class="form-label">Mobile No</label>
+      <input type="text" class="form-control" id="mobilenoforuser" value="1234567899" readonly>
+    </div>
+    <div class="col-sm-1 col-2 offset-1"><button class="btn btn-warning" id="mobileno_edit_button" data-btnname="edit_mobileno_btn" style="margin-top: 30px;"><i class="far fa-edit"></i></button></i></div>
+  </div>
+   </form>
+  </div>
+
+<!-- Chnage password -->
+
+<div class="col-sm-8 offset-sm-1" id="profile_change_password_tab" style="display: none;">
+  <form action="" method="post">
+   <!-- {% csrf_token %} -->
+   <div class="row">
+   <div class="col-8 mb-1">
+     <label for="user_old_pass" class="form-label">Enter Old Password</label>
+     <input type="password" class="form-control" id="user_old_pass" placeholder="**********">
+   </div>
+ </div>
+ <div class="row">
+   <div class="col-8 mb-1">
+     <label for="user_new_pass" class="form-label">Enter New Password</label>
+     <input type="password" class="form-control" id="user_new_pass" placeholder="**********">
+   </div>
+ </div>
+  <div class="row">
+   <div class="col-8 mb-1">
+     <label for="user_conf_pass" class="form-label">Enter Confirm Passwrod</label>
+     <input type="password" class="form-control" id="user_conf_pass" value="" placeholder="**********">
+   </div>
+ </div>
+
+   <div class="col-12 mt-3">
+     <button type="submit" class="btn btn-primary" id="user_change_pass_sbtn">Change Password</button>
+   </div>
+  </form>
+ </div>
+
+<!-- address tab -->
+<div class="col-sm-8 offset-sm-1" id="profile_address_tab" style="display: none;">
+  <div class="container-fluid g-0" id="profile_page_address_area">
+
+   <div class="row">
+  
+    <div class="col-sm-4" id="add_address_btn_div">
+      <button id="add_address_btn" class="btn btn-info"><i class="fas fa-plus"></i></button>
+    </div>
+    <hr id="profile_add_horizontal_line">
+    <div class="row" id="profile_page_address_lists">
+      
+    </div>
+   </div>
+
+</div>
+
+
+ </div>
+</div>
+</div>
+{% endblock main-content %}

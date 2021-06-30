@@ -1,0 +1,66 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Product Detail{% endblock title %}
+{% block pagename %}
+<script>
+  var pagetitle = "productdetail";
+</script>
+{% endblock pagename %}
+{% block main-content %}
+<div class="container product_details_page"  style="margin-top: 120px;" id="page_start_margin_setup">
+ <div class="row">
+     <!-- image view start -->
+  <div class="col-sm-7  text-center align-self-center " id="product_details_slider_and_big_image_container">
+      <div class="container-fluid g-0" >
+          <div class="row">
+              <div class="col-sm-3 order-sm-1 text-center order-2 col-12">
+                  <!-- image small list code start -->
+                <ul id="det_img_small_slider_list" class="d-sm-block d-inline-block">
+                    <!-- <li  class="d-sm-block d-inline-block"><img src="http://127.0.0.1:8000/media/productimg/vivo_z1_pro_xJ1bgTJ.jpg" alt="" id="small_img"></li>
+                    <li  class="d-sm-block d-inline-block"><img src="http://127.0.0.1:8000/media/productimg/Coolpad_Cool_6.jpg" alt="" id="small_img"></li>
+                    <li  class="d-sm-block d-inline-block"><img src="http://127.0.0.1:8000/media/productimg/Oppo_A31.jpg" alt="" id="small_img"></li>
+                    <li  class="d-sm-block d-inline-block"><img src="http://127.0.0.1:8000/media/productimg/Realme_6_Pro.jpg" alt="" id="small_img"></li>
+                    <li  class="d-sm-block d-inline-block"><img src="http://127.0.0.1:8000/media/productimg/Redmi_9_Power.jpg" alt="" id="small_img"></li> -->
+       
+                </ul>
+              </div>
+               <!-- image small list code end -->
+
+              <div class="col-sm-8 offset-1 order-sm-2 order-1" id="big_image_prodcut_det_container">
+                <img src="{% static 'app/images/product/zoomsl.jpg' %}" alt="" class="img-fluid img-thumbnail" id="big_img">
+              </div>
+          </div>
+      </div>
+   
+  </div>
+  <!-- image view end -->
+  <div class="col-sm-5 order-1" id="product_details_sec">
+   <h5 id="pro_title" class=""></h5>
+   <hr>
+   <h5 id="pro_price" ></h5> <br>
+   <ul id="pro_description" style="font-size: 14px;"></ul> <br>
+   <div class="container-fluid mb-5 g-0">
+     <div class="row">
+       <div class="col-sm-12 col-12 text-center mb-2">
+
+        <a href="{% url 'add-to-cart' %}" class="btn btn-outline-primary shadow px-5 py-2" id="Add_to_cart_btn">Add to Cart</a>
+       </div>
+
+       <!-- <div class="col-sm-6 col-12 text-center">
+        <a href="{% url 'buy-now' %}" class="btn btn-danger shadow px-5 py-2 ms-4" id="Buy_now_btn"> Buy Now</a>
+       </div> -->
+     </div>
+   </div>
+   
+   
+   <!-- <h5 class="mt-5">Available Offers</h5>
+   <ul>
+    <li>Bank Offer 5% Unlimited Cashback on Flipkart Axis Bank Credit</li>
+    <li>Special Price Get extra ₹3000 off (price inclusive of discount)</li>
+    <li>No cost EMI ₹1,667/month. Standard EMI also available</li>
+    <li>Partner Offer ₹2000 Flipkart Gift Card on Every 1000th Transaction with a new Visa Debit/Credit Card</li>
+   </ul> -->
+  </div>
+ </div>
+</div>
+{% endblock main-content %}
